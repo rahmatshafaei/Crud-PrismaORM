@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+         form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 650px;
+    margin-left: 35%;
+  }
+  label {
+    font-weight: bold;
+  }
+.txt,.pass
+  {
+    margin:5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  input[type="submit"] {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+    </style>
+</head>
+<body>
+  <%-  include ("navbar-log")%>
+    <form action="/send" method="post">
+        <label for="username">User-Name</label>
+        <input type="text" class="txt" name="userName">
+        <br>
+            <label for="password">Password</label>
+            <input type="password" class="pass" name="password">
+            <br>
+            <input type="submit" value="Login">
+    </form>
+</body>
+</html>
